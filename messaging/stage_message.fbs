@@ -5,7 +5,7 @@ namespace showtime;
 // Signal messages
 // ---------------
 enum Signal : byte {
-    EMPTY = 0,
+    EMPTY,
     OK,
     CLIENT_SYNC,
     CLIENT_HEARTBEAT,
@@ -26,7 +26,7 @@ enum Signal : byte {
 }
 
 enum ClientLeaveReason : byte {
-    QUIT = 0,
+    QUIT,
     TIMEOUT,
     CRASH
 }
@@ -143,7 +143,7 @@ union Content {
     CableCreateRequest,
     CableReadRequest,
     CableUpdateRequest,
-    CableDestroyRequest,
+    CableDestroyRequest
 }
 
 
@@ -151,7 +151,7 @@ union Content {
 // ----------------
 table StageMessage {
     content:Content;
-    id:uint64;
+    id:ulong;
 }
 
 root_type StageMessage;

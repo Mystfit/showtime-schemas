@@ -5,7 +5,7 @@ namespace showtime;
 // ------
 
 enum ValueType : byte {
-    NONE = 0,
+    NONE,
     INT,
     FLOAT,
     STRING
@@ -39,7 +39,7 @@ table PlugValue {
 // --------
 
 enum PlugDirection : byte {
-    NONE = 0,
+    NONE,
     IN_JACK,
     OUT_JACK
 }
