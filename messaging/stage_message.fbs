@@ -151,7 +151,7 @@ union Content {
 // ----------------
 table StageMessage {
     content:Content;
-    id:ulong;
+    id:[ubyte];
 }
 
 root_type StageMessage;
