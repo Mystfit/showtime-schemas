@@ -4,13 +4,6 @@ namespace showtime;
 // Values
 // ------
 
-enum ValueType : byte {
-    NONE,
-    INT,
-    FLOAT,
-    STRING
-}
-
 table IntList {
     val:[int];
 }
@@ -23,14 +16,18 @@ table StrList {
     val:[string];
 }
 
-union ValueList {
+table PlugHandshake {
+}
+
+union PlugValueData {
     IntList,
     FloatList,
-    StrList
+    StrList,
+    PlugHandshake
 } 
 
 table PlugValue {
-    values: ValueList;
+    values: PlugValueData;
 }
 
 
