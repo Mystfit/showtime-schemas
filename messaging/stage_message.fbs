@@ -67,7 +67,7 @@ table ClientLeaveRequest {
 // Hierarchy messages
 // ------------------
 table EntityCreateRequest {
-    entities:[EntityTypes];
+    entity:EntityTypes;
 }
 
 table EntityReadRequest {
@@ -75,7 +75,7 @@ table EntityReadRequest {
 }
 
 table EntityUpdateRequest {
-    entities:[EntityTypes];
+    entity:EntityTypes;
 }
 
 table EntityDestroyRequest {
@@ -103,7 +103,7 @@ table FactoryCreateEntityRequest {
 // Cable messages
 // --------------
 table CableCreateRequest {
-    cables:[Cable];
+    cable:Cable;
 }
 
 table CableReadRequest {
@@ -116,7 +116,7 @@ table CableUpdateRequest {
 }
 
 table CableDestroyRequest {
-    cables:[Cable];
+    cable:Cable;
 }
 
 
