@@ -31,10 +31,18 @@ enum ClientLeaveReason : byte {
     CRASH
 }
 
+enum ServerStatus: byte {
+    QUIT,
+    CRASH
+}
+
 table SignalMessage {
     signal:Signal;
 }
 
+table ServerStatusMessage {
+    status:ServerStatus;
+}
 
 // Client connection messages
 // --------------------------
@@ -124,6 +132,8 @@ table CableDestroyRequest {
 // ------
 union Content {
     SignalMessage,
+    // ----------
+    ServerStatusMessage,
     // ----------
     ClientJoinRequest,
     ClientLeaveRequest,
