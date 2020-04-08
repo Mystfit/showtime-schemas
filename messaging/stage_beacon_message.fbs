@@ -1,7 +1,6 @@
 table StageBeaconMessage {
 	name: string;
 	port: int;
-	leaving: bool;
 }
 
 root_type StageBeaconMessage;
