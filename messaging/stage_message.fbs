@@ -84,6 +84,7 @@ table EntityReadRequest {
 
 table EntityUpdateRequest {
     entity:EntityTypes;
+    original_path:string;
 }
 
 table EntityDestroyRequest {
