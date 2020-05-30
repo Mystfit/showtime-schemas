@@ -12,6 +12,7 @@ enum Signal : byte {
 
     //Error signals
     ERR_MSG_TYPE_UNKNOWN,
+    ERR_MSG_MALFORMED,
     ERR_STAGE_BAD_CABLE_DISCONNECT_REQUEST,
     ERR_STAGE_BAD_CABLE_CONNECT_REQUEST,
     ERR_STAGE_PERFORMER_NOT_FOUND,
@@ -108,6 +109,10 @@ table FactoryCreateEntityRequest {
     name:string;
 }
 
+table FactoryCreateEntityACK {
+    created_entity_URI:string;
+}
+
 
 // Cable messages
 // --------------
@@ -150,6 +155,7 @@ union Content {
     EntityObserveRequest,
     // ----------
     FactoryCreateEntityRequest,
+    FactoryCreateEntityACK,
     // ----------
     CableCreateRequest,
     CableReadRequest,
@@ -162,7 +168,6 @@ union Content {
 // ----------------
 table StageMessage {
     content:Content;
-    id:[ubyte];
 }
 
 root_type StageMessage;
