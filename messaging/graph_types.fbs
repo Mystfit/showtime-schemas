@@ -16,6 +16,10 @@ table StrList {
     val:[string];
 }
 
+table ByteList {
+    val:[ubyte];
+}
+
 table PlugHandshake {
 }
 
@@ -23,6 +27,7 @@ union PlugValueData {
     IntList,
     FloatList,
     StrList,
+    ByteList,
     PlugHandshake
 } 
 
