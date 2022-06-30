@@ -51,11 +51,13 @@ table ClientJoinRequest {
     performer:Performer;
     graph_reliable_address:string;
     graph_unreliable_address:string;
+    graph_unreliable_public_address:string;
 }
 
 table ClientGraphHandshakeStart {
     receiver_URI:string;
-    receiver_address:string;
+    receiver_unreliable_address:string;
+    receiver_unreliable_public_address:string;
 }
 
 table ClientGraphHandshakeStop {
@@ -64,7 +66,8 @@ table ClientGraphHandshakeStop {
 
 table ClientGraphHandshakeListen {
     sender_URI:string;
-    sender_address:string;
+    sender_reliable_address:string;
+    sender_unreliable_address:string;
 }
 
 table ClientLeaveRequest {
