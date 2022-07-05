@@ -24,12 +24,16 @@ table PlugHandshake {
     sender_URI:string;
 }
 
+table PlugKeepalive {
+}
+
 union PlugValueData {
     IntList,
     FloatList,
     StrList,
     ByteList,
-    PlugHandshake
+    PlugHandshake,
+    PlugKeepalive
 } 
 
 table PlugValue {
