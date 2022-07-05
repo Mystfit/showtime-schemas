@@ -68,6 +68,7 @@ table ClientGraphHandshakeListen {
     sender_URI:string;
     sender_reliable_address:string;
     sender_unreliable_address:string;
+    sender_unreliable_public_address:string;
 }
 
 table ClientLeaveRequest {
