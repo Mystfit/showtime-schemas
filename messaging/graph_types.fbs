@@ -21,7 +21,7 @@ table ByteList {
 }
 
 table PlugHandshake {
-    sender_URI:string;
+    sender_address:string;
 }
 
 table PlugKeepalive {
