@@ -15,6 +15,7 @@ enum Signal : byte {
     ERR_MSG_MALFORMED,
     ERR_STAGE_BAD_CABLE_DISCONNECT_REQUEST,
     ERR_STAGE_BAD_CABLE_CONNECT_REQUEST,
+    ERR_STAGE_MISMATCHED_PLUG_RELIABILITY,
     ERR_STAGE_PERFORMER_NOT_FOUND,
     ERR_STAGE_PERFORMER_ALREADY_EXISTS,
     ERR_STAGE_PERFORMER_ALREADY_CONNECTED,
@@ -65,6 +66,12 @@ table ClientGraphHandshakeStart {
     connection_type:ConnectionType;
     receiver_address:string;
     receiver_public_address:string;
+}
+
+ClientGraphHandshakeStartAck {
+    connection_type:ConnectionType;
+    sender_address:string;
+    sender_public_address:string;
 }
 
 table ClientGraphHandshakeStop {

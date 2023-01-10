@@ -65,6 +65,7 @@ table PerformerData {
 
 table PlugData {
     plug_direction: PlugDirection;
+    reliable: int;
     max_cables: int;
     value: PlugValue;
 }
