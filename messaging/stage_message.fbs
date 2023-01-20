@@ -68,7 +68,7 @@ table ClientGraphHandshakeStart {
     receiver_public_address:string;
 }
 
-ClientGraphHandshakeStartAck {
+table ClientGraphHandshakeStartAck {
     connection_type:ConnectionType;
     sender_address:string;
     sender_public_address:string;

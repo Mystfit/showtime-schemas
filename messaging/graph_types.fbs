@@ -51,6 +51,11 @@ enum PlugDirection : byte {
     OUT_JACK
 }
 
+enum ValueSizeType : byte {
+    FIXED,
+    DYNAMIC
+}
+
 table EntityData {
     URI:string;
     owner:string;
@@ -68,6 +73,8 @@ table PlugData {
     reliable: int;
     max_cables: int;
     value: PlugValue;
+    size_type: ValueSizeType;
+    fixed_size: int;
 }
 
 table FactoryData {
