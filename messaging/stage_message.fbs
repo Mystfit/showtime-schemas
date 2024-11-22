@@ -95,7 +95,7 @@ table ClientLeaveRequest {
 // Hierarchy messages
 // ------------------
 table EntityCreateRequest {
-    entity:EntityTypes;
+    entity:[EntityTypes];
 }
 
 table EntityReadRequest {
